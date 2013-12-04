@@ -1,1 +1,5 @@
 Landing page created for locations index.html.erb
+
+<% @places.each do |x| %>
+<li><%= link_to x.name, x %></li>
+<% end %>
