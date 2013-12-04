@@ -54,5 +54,5 @@ Threesquare::Application.routes.draw do
   #     resources :products
   #   end
   root 'locations#index'
-  resources :location
+  resources :locations
 end
