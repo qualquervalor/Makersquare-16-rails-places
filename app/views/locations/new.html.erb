@@ -1,13 +1,2 @@
 NEW VIEW FOR LOCATION
-<%= form_for @place do |loc|%>
-	<%= loc.label :name %>
-	<%= loc.text_field :name %>
-	<br>
-	<%= loc.label :picture_url %>
-	<%= loc.text_field :picture_url %>
-	<br>
-	<%= loc.label :review %>
-	<%= loc.text_area :review %>
-	<br>
-	<%= loc.submit %>
-<% end %>	
+<%= render "form" %>

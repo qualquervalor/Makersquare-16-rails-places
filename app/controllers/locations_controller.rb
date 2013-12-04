@@ -19,12 +19,19 @@ class LocationsController < ApplicationController
 	end
 
 	def edit
+		@place = Location.find_by_id(params[:id])
 	end
 
 	def update
+		place = Location.find_by_id(params[:id])
+		place.update(loc_params)
+		redirect_to root_path
 	end
 
 	def destroy
+		place = Location.find_by_id(params[:id])
+		place.destroy
+		redirect_to root_path
 	end
 
 	private 
