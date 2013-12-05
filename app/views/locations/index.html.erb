@@ -1,9 +1,14 @@
-Landing page created for locations index.html.erb
+
 
 <% @places.each do |x| %>
 <li>
+<div>
 <%= link_to x.name, x %>
 <%= link_to "Edit", edit_location_path(x) %>
 <%= link_to "Delete", x, method: :delete, data: { confirm: 'Are you sure?' } %>
+<br>
+<img height="100" with="100" src=<%=x.picture_url%> >
+<%= x.snippet %>
+</div>
 </li>
 <% end %>

@@ -54,5 +54,17 @@ Threesquare::Application.routes.draw do
   #     resources :products
   #   end
   root 'locations#index'
-  resources :locations
+  # resources :locations
+get '/locations' => 'locations#index'
+get '/locations/new' => 'locations#new', as: 'new_location'
+get '/locations/:id/edit' => 'locations#edit', as: 'edit_location'
+get '/locations/:id' => 'locations#show', as: 'location'
+
+post '/locations' => 'locations#create'
+
+ put  '/locations/:id'  => 'locations#update'
+ patch '/locations/:id' => 'locations#update'
+
+delete '/locations/:id' => 'locations#destroy'
+
 end
